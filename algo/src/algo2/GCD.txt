@@ -1,0 +1,33 @@
+Greatest Common Divisor (Eucleadean Algorithm) - Subtraction
+Test 0 - true, run time: 3 ms
+Test 1 - true, run time: 1 ms
+Test 2 - true, run time: 3809 ms
+Test 3 - true, run time: 5284 ms
+Test 4 - true, run time: 100 ms
+Test 5 - true, run time: 72 ms
+Test 6 ... too long to calculate ...
+
+Greatest Common Divisor (Eucleadean Algorithm) - Remainder
+Test 0 - true, run time: 2 ms
+Test 1 - true, run time: 0 ms
+Test 2 - true, run time: 1 ms
+Test 3 - true, run time: 0 ms
+Test 4 - true, run time: 0 ms
+Test 5 - true, run time: 0 ms
+Test 6 - true, run time: 0 ms
+Test 7 - true, run time: 1 ms
+Test 8 - true, run time: 2 ms
+Test 9 - true, run time: 0 ms
+
+Greatest Common Divisor (Eucleadean Algorithm) - Binary 
+Test 0 - true, run time: 4 ms
+Test 1 - true, run time: 0 ms
+Test 2 - true, run time: 0 ms
+Test 3 - true, run time: 0 ms
+Test 4 - true, run time: 0 ms
+Test 5 - true, run time: 1 ms
+Test 6 - true, run time: 1 ms
+Test 7 - true, run time: 1 ms
+Test 8 - true, run time: 1 ms
+Test 9 - true, run time: 3 ms
+

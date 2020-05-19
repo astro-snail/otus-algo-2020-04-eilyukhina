@@ -1,0 +1,55 @@
+N-th Fibonacci Number - Recursion
+Test 0 - true, run time: 2 ms
+Test 1 - true, run time: 3 ms
+Test 2 - true, run time: 0 ms
+Test 3 - true, run time: 0 ms
+Test 4 - true, run time: 0 ms
+Test 5 - true, run time: 0 ms
+Test 6 - true, run time: 0 ms
+Test 7 ... too long to calculate ...
+
+N-th Fibonacci Number - Iteration
+Test 0 - true, run time: 1 ms
+Test 1 - true, run time: 1 ms
+Test 2 - true, run time: 0 ms
+Test 3 - true, run time: 0 ms
+Test 4 - true, run time: 0 ms
+Test 5 - true, run time: 0 ms
+Test 6 - true, run time: 0 ms
+Test 7 - true, run time: 1 ms
+Test 8 - true, run time: 5 ms
+Test 9 - true, run time: 51 ms
+Test 10 - true, run time: 620 ms
+Test 11 - true, run time: 49547 ms
+Test 12 ... too long to calculate ...
+
+N-th Fibonacci Number - Binet formula (from the 70th number the result is not correct because of not enough precision in sqrt(5))
+Test 0 - true, run time: 2 ms
+Test 1 - true, run time: 11 ms
+Test 2 - true, run time: 0 ms
+Test 3 - true, run time: 2 ms
+Test 4 - true, run time: 1 ms
+Test 5 - true, run time: 1 ms
+Test 6 - true, run time: 1 ms
+Test 7 - false, run time: 14 ms
+Test 8 - false, run time: 236 ms
+Test 9 - false, run time: 2568 ms
+Test 10 - false, run time: 166299 ms
+Test 11 ... too long to calculate ...
+
+N-th Fibonacci Number - Matrix
+Test 0 - true, run time: 2 ms
+Test 1 - true, run time: 3 ms
+Test 2 - true, run time: 0 ms
+Test 3 - true, run time: 0 ms
+Test 4 - true, run time: 0 ms
+Test 5 - true, run time: 0 ms
+Test 6 - true, run time: 0 ms
+Test 7 - true, run time: 0 ms
+Test 8 - true, run time: 1 ms
+Test 9 - true, run time: 20 ms
+Test 10 - true, run time: 112 ms
+Test 11 - true, run time: 1876 ms
+Test 12 - true, run time: 19654 ms
+
+

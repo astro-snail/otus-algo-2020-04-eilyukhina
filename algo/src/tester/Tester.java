@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.Arrays;
 
 public class Tester {
 	
@@ -17,6 +18,7 @@ public class Tester {
 	
 	public void runTests() {
 		int n = 0;
+		System.out.println(task.getName());
 		while (true) {
 			Path inFile = Paths.get(path, "test." + n + ".in");
 			Path outFile = Paths.get(path, "test." + n + ".out");
@@ -27,15 +29,21 @@ public class Tester {
 		}
 	}
 	
-	private boolean runTest(Path inFile, Path outFile) {
+	private String runTest(Path inFile, Path outFile) {
 		try {
-			String[] data = Files.readAllLines(inFile).toArray(new String[0]);
-			String expected = new String(Files.readAllBytes(outFile)).trim();
-			String actual = task.run(data);
-			return actual.equals(expected);
+			String[] in = Files.readAllLines(inFile).toArray(new String[0]);
+			String[] out = Files.readAllLines(outFile).toArray(new String[0]);
+			
+			long start = System.currentTimeMillis();
+			
+			String[] result = task.run(in);
+			
+			long end = System.currentTimeMillis();
+
+			return Arrays.equals(result, out) + ", run time: " + (end - start) + " ms";
+			
 		} catch (IOException e) {
-			System.out.print(e.getMessage());
-			return false;
+			return e.getMessage();
 		}
 	}
 }

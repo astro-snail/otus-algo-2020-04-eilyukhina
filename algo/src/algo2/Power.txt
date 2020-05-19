@@ -1,0 +1,70 @@
+A to B-th power - Loop
+Test 0 - true, run time: 0 ms
+Test 1 - true, run time: 0 ms
+Test 2 - false, run time: 0 ms
+Test 3 - false, run time: 0 ms
+Test 4 - false, run time: 0 ms
+Test 5 - false, run time: 0 ms
+Test 6 - false, run time: 15 ms
+Test 7 - false, run time: 281 ms
+Test 8 - false, run time: 2692 ms
+Test 9 - false, run time: 27825 ms
+
+A to B-th power - Highest power of 2 + Iteration
+Test 0 - true, run time: 3 ms
+Test 1 - true, run time: 0 ms
+Test 2 - false, run time: 0 ms
+Test 3 - false, run time: 0 ms
+Test 4 - false, run time: 1 ms
+Test 5 - false, run time: 4 ms
+Test 6 - false, run time: 8 ms
+Test 7 - false, run time: 89 ms
+Test 8 - false, run time: 1254 ms
+Test 9 - false, run time: 3804 ms
+
+A to B-th power - Sum of powers of 2
+Test 0 - true, run time: 3 ms
+Test 1 - true, run time: 0 ms
+Test 2 - false, run time: 0 ms
+Test 3 - false, run time: 0 ms
+Test 4 - false, run time: 0 ms
+Test 5 - false, run time: 0 ms
+Test 6 - false, run time: 0 ms
+Test 7 - false, run time: 1 ms
+Test 8 - false, run time: 0 ms
+Test 9 - false, run time: 0 ms
+
+К сожалению, пройти все тесты не удалось. Я полагаю, что это связано с использованием мной типа double. Ниже привожу различия в своих результатах и результатах тестов для каждого алгоритма.
+
+Test 0 - 0.0
+Test 1 - 0.0
+Test 2 - -2.935429677108914E-13
+Test 3 - 4.898303984646191E-12
+Test 4 - 2.2946089472952735E-12
+Test 5 - -4.063860359337923E-12
+Test 6 - 2.0103918529912335E-12
+Test 7 - -3.640199253140963E-12
+Test 8 - 1.899369550528718E-12
+Test 9 - 3.1596947280831955E-12
+
+Test 0 - 0.0
+Test 1 - 0.0
+Test 2 - -3.299582829185965E-13
+Test 3 - 4.455547042425678E-12
+Test 4 - 5.738964858892359E-12
+Test 5 - 2.7611246622427643E-11
+Test 6 - -1.2554446371382255E-10
+Test 7 - -8.023537834134231E-9
+Test 8 - -1.1378604725109653E-8
+Test 9 - -8.378774118966703E-9
+
+Test 0 - 0.0
+Test 1 - 0.0
+Test 2 - -3.717026686445024E-13
+Test 3 - 4.356071059419264E-12
+Test 4 - 7.528200285378261E-12
+Test 5 - 5.6427307271178506E-11
+Test 6 - -1.4962742156399145E-10
+Test 7 - -1.1954202516761825E-8
+Test 8 - -2.1195490695902208E-8
+Test 9 - -9.754751673085593E-9

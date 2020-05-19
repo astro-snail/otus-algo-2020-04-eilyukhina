@@ -12,9 +12,14 @@ public class Tickets implements Task {
 	}
 
 	@Override
-	public String run(String[] data) {
+	public String[] run(String[] data) {
 		int n = Integer.parseInt(data[0]);
-		return String.valueOf(getNumberOfCombinations(n));
+		return new String[]{String.valueOf(getNumberOfCombinations(n))};
+	}
+	
+	@Override
+	public String getName() {
+		return "Tickets";
 	}
 
 	private long getNumberOfCombinations(int n) {

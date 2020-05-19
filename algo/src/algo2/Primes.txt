@@ -1,0 +1,86 @@
+Prime Numbers - Trying all possible divisors
+Test 0 - true, run time: 0 ms
+Test 1 - true, run time: 0 ms
+Test 2 - true, run time: 0 ms
+Test 3 - true, run time: 0 ms
+Test 4 - true, run time: 0 ms
+Test 5 - true, run time: 0 ms
+Test 6 - true, run time: 0 ms
+Test 7 - true, run time: 13 ms
+Test 8 - true, run time: 485 ms
+Test 9 - true, run time: 31331 ms
+Test 10 ... too long to calculate ...
+
+Prime Numbers - Modification 1 - Exit when the first divisor is found
+Test 0 - true, run time: 0 ms
+Test 1 - true, run time: 0 ms
+Test 2 - true, run time: 0 ms
+Test 3 - true, run time: 0 ms
+Test 4 - true, run time: 0 ms
+Test 5 - true, run time: 0 ms
+Test 6 - true, run time: 0 ms
+Test 7 - true, run time: 6 ms
+Test 8 - true, run time: 65 ms
+Test 9 - true, run time: 2554 ms
+Test 10 ... too long to calculate ...
+
+Prime Numbers - Modification 2 - Loop up to sqrt(n)
+Test 0 - true, run time: 0 ms
+Test 1 - true, run time: 0 ms
+Test 2 - true, run time: 0 ms
+Test 3 - true, run time: 0 ms
+Test 4 - true, run time: 0 ms
+Test 5 - true, run time: 0 ms
+Test 6 - true, run time: 0 ms
+Test 7 - true, run time: 0 ms
+Test 8 - true, run time: 3 ms
+Test 9 - true, run time: 23 ms
+Test 10 - true, run time: 302 ms
+Test 11 - true, run time: 5036 ms
+Test 12 ... too long to calculate ...
+
+Prime Numbers - Modification 3 - Array of primes
+Test 0 - true, run time: 0 ms
+Test 1 - true, run time: 0 ms
+Test 2 - true, run time: 0 ms
+Test 3 - true, run time: 0 ms
+Test 4 - true, run time: 0 ms
+Test 5 - true, run time: 0 ms
+Test 6 - true, run time: 0 ms
+Test 7 - true, run time: 1 ms
+Test 8 - true, run time: 1 ms
+Test 9 - true, run time: 13 ms
+Test 10 - true, run time: 116 ms
+Test 11 - true, run time: 2429 ms
+Test 12 ... too long to calculate ...
+
+Prime Numbers Prime Numbers - Sieve of Eratosthenes - O(n log log n)
+Test 0 - true, run time: 0 ms
+Test 1 - true, run time: 0 ms
+Test 2 - true, run time: 0 ms
+Test 3 - true, run time: 0 ms
+Test 4 - true, run time: 0 ms
+Test 5 - true, run time: 0 ms
+Test 6 - true, run time: 0 ms
+Test 7 - true, run time: 0 ms
+Test 8 - true, run time: 2 ms
+Test 9 - true, run time: 12 ms
+Test 10 - true, run time: 17 ms
+Test 11 - true, run time: 285 ms
+Test 12 - true, run time: 1899 ms
+Test 13 ... Out of heap memory ... array is too big
+
+Prime Numbers - Sieve of Eratosthenes - O(n)
+Test 0 - true, run time: 0 ms
+Test 1 - true, run time: 0 ms
+Test 2 - true, run time: 0 ms
+Test 3 - true, run time: 0 ms
+Test 4 - true, run time: 0 ms
+Test 5 - true, run time: 0 ms
+Test 6 - true, run time: 0 ms
+Test 7 - true, run time: 1 ms
+Test 8 - true, run time: 8 ms
+Test 9 - true, run time: 16 ms
+Test 10 - true, run time: 44 ms
+Test 11 - true, run time: 272 ms
+Test 12 ... Out of heap memory ... 2 arrays are too big

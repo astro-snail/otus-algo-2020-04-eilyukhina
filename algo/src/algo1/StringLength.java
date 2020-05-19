@@ -12,7 +12,12 @@ public class StringLength implements Task {
 	}
 
 	@Override
-	public String run(String[] data) {
-		return (data != null && data.length > 0) ? String.valueOf(data[0].length()) : String.valueOf(0);
+	public String[] run(String[] data) {
+		return new String[] {(data != null && data.length > 0) ? String.valueOf(data[0].length()) : String.valueOf(0)};
+	}
+
+	@Override
+	public String getName() {
+		return "String Length";
 	}
 }
