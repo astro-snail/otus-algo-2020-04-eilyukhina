@@ -54,7 +54,7 @@ Test 10 - true, run time: 116 ms
 Test 11 - true, run time: 2429 ms
 Test 12 ... too long to calculate ...
 
-Prime Numbers Prime Numbers - Sieve of Eratosthenes - O(n log log n)
+Prime Numbers - Sieve of Eratosthenes - O(n log log n)
 Test 0 - true, run time: 0 ms
 Test 1 - true, run time: 0 ms
 Test 2 - true, run time: 0 ms
@@ -69,6 +69,23 @@ Test 10 - true, run time: 17 ms
 Test 11 - true, run time: 285 ms
 Test 12 - true, run time: 1899 ms
 Test 13 ... Out of heap memory ... array is too big
+
+Prime Numbers - Sieve of Eratosthenes - O(n log log n) with memory optimisation
+Test 0 - true, run time: 0 ms
+Test 1 - true, run time: 0 ms
+Test 2 - true, run time: 0 ms
+Test 3 - true, run time: 0 ms
+Test 4 - true, run time: 0 ms
+Test 5 - true, run time: 0 ms
+Test 6 - true, run time: 0 ms
+Test 7 - true, run time: 0 ms
+Test 8 - true, run time: 2 ms
+Test 9 - true, run time: 9 ms
+Test 10 - true, run time: 14 ms
+Test 11 - true, run time: 136 ms
+Test 12 - true, run time: 1904 ms
+Test 13 - true, run time: 20669 ms
+Test 14 - true, run time: 2319 ms
 
 Prime Numbers - Sieve of Eratosthenes - O(n)
 Test 0 - true, run time: 0 ms

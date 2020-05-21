@@ -14,7 +14,7 @@ public class PrimeNumber implements Task {
 	@Override
 	public String[] run(String[] data) {
 		int n = Integer.parseInt(data[0]);
-		int res = getNumberOfPrimes3(n);
+		int res = getNumberOfPrimes21(n);
 		return new String[] {String.valueOf(res)};
 	}
 	
@@ -82,6 +82,24 @@ public class PrimeNumber implements Task {
 				for (int j = i * i; j <= n; j += i) {
 					if (!p[j - 2]) {
 						p[j - 2] = true;
+						count--;
+					}
+				}
+			}
+		}
+		return count;
+	}
+	
+	// решето Эратосфена - 1 - with memory optimisation
+	private int getNumberOfPrimes21(int n) {
+		int k = (n - 1) % 32 == 0 ? (n - 1) / 32 : (n - 1) / 32 + 1;  
+		int[] p = new int[k];
+		int count = n - 1; // all numbers from 2 to n
+		for (int i = 2; i * i <= n; i++) {
+			if ((p[(i - 2) / 32] >>> (i - 2) % 32 & 1) == 0) {
+				for (int j = i * i; j <= n; j += i) {
+					if ((p[(j - 2) / 32] >>> (j - 2) % 32 & 1) == 0) {
+						p[(j - 2) / 32] = p[(j - 2) / 32] ^ (1 << (j - 2) % 32);
 						count--;
 					}
 				}
