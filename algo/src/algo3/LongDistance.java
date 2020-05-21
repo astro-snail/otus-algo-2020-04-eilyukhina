@@ -126,7 +126,7 @@ public class LongDistance implements Task {
 		return moves;
 	}
 	
-	private long bishopMoves(long pos, long l, long r, long white, long black) {
+	private long bishopMoves(long pos, long l, long r, long w, long b) {
 		// check if initial position on left/right border - no left/right moves
 		long mlu = pos & l;
 		long mru = pos & r;
@@ -137,17 +137,17 @@ public class LongDistance implements Task {
 		
 		while (Long.compareUnsigned((mlu | mru | mld | mrd), 0L) > 0) {
 			// shift and check if new place is empty - only check for white
-			mlu = (mlu <<  7L) & white;
-			mru = (mru <<  9L) & white;
-			mld = (mld >>> 9L) & white;
-			mrd = (mrd >>> 7L) & white;
+			mlu = (mlu <<  7L) & w;
+			mru = (mru <<  9L) & w;
+			mld = (mld >>> 9L) & w;
+			mrd = (mrd >>> 7L) & w;
 			// add to all moves
 			moves += mlu | mru | mld | mrd;
 			// check if we reached the border or any black piece
-			mlu &= l & black;
-			mru &= r & black;
-			mld &= l & black;
-			mrd &= r & black;
+			mlu &= l & b;
+			mru &= r & b;
+			mld &= l & b;
+			mrd &= r & b;
 		}
 		return moves;
 	}
