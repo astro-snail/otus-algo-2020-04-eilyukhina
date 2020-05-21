@@ -24,7 +24,7 @@ public class FibonacciNumber implements Task {
 	@Override
 	public String[] run(String[] data) {
 		int n = Integer.parseInt(data[0]);
-		BigInteger result = getFibonacciNumber3(n);
+		BigInteger result = getFibonacciNumber4(n);
 		return new String[] {String.valueOf(result)};
 	}
 	
@@ -121,11 +121,21 @@ public class FibonacciNumber implements Task {
 		}
 		
 		public Matrix2D multiply(Matrix2D b) {
+			// 3 multiplications for a symmetric matrix (a12 = a21)
+			BigInteger res11 = a11.multiply(b.a11).add(a12.multiply(b.a21));
+			BigInteger res12_21 = a11.multiply(b.a12).add(a12.multiply(b.a22));
+			BigInteger res22 = a21.multiply(b.a12).add(a22.multiply(b.a22));
+			
+			return new Matrix2D(res11, res12_21, res12_21, res22);
+			
+			// 4 multiplications for a general case
+			/*
 			return new Matrix2D(
-					a11.multiply(b.a11).add(a12.multiply(b.a21)), 
-					a11.multiply(b.a12).add(a12.multiply(b.a22)),
-					a21.multiply(b.a11).add(a22.multiply(b.a21)),
-					a21.multiply(b.a12).add(a22.multiply(b.a22)));
+				a11.multiply(b.a11).add(a12.multiply(b.a21)),
+				a11.multiply(b.a12).add(a12.multiply(b.a22)),
+				a21.multiply(b.a11).add(a22.multiply(b.a21)),
+				a21.multiply(b.a12).add(a22.multiply(b.a22)));
+			*/
 		}
 	}
 }

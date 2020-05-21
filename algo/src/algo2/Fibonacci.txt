@@ -52,4 +52,19 @@ Test 10 - true, run time: 112 ms
 Test 11 - true, run time: 1876 ms
 Test 12 - true, run time: 19654 ms
 
+N-th Fibonacci Number - Matrix - 1 less multiplication
+Test 0 - true, run time: 1 ms
+Test 1 - true, run time: 1 ms
+Test 2 - true, run time: 0 ms
+Test 3 - true, run time: 0 ms
+Test 4 - true, run time: 0 ms
+Test 5 - true, run time: 1 ms
+Test 6 - true, run time: 0 ms
+Test 7 - true, run time: 0 ms
+Test 8 - true, run time: 2 ms
+Test 9 - true, run time: 18 ms
+Test 10 - true, run time: 138 ms
+Test 11 - true, run time: 1600 ms
+Test 12 - true, run time: 16573 ms
+
 
