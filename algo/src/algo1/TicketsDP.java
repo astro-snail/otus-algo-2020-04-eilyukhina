@@ -28,11 +28,14 @@ public class TicketsDP implements Task {
 		for (int k = 1; k <= n; k++) {
 			long[] res = new long[9 * k + 1];
 			for (int i = 0; i <= 9 * k; i++) {
-				for (int j = 0; j <= 9; j++) {
+				for (int j = Math.max(0, i - 9 * (k - 1)); j <= Math.min(9, i); j++) {
+					res[i] += num[i - j];
+				}
+				/*for (int j = 0; j <= 9; j++) {
 					if ((i - j) >= 0 & (i - j) <= 9 * (k - 1)) {
 						res[i] += num[i - j];
 					}
-				}
+				}*/
 				if (k == n)
 					count += res[i] * res[i];
 			}
