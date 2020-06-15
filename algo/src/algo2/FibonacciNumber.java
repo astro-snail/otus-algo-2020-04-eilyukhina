@@ -10,13 +10,6 @@ public class FibonacciNumber implements Task {
 	
 	public static void main(String[] args) {		
 		Task task = new FibonacciNumber();
-		
-		/*for (int i = 2; i < 100; i++) {
-			BigInteger n1 = ((FibonacciNumber)task).getFibonacciNumber4(i);
-			BigInteger n2 = ((FibonacciNumber)task).getFibonacciNumber3(i);
-			System.out.println(i + " " + n1 + " " + n2 + " " + n1.subtract(n2));
-		}*/
-		
 		Tester tester = new Tester(task, "C:\\Users\\Elena\\Documents\\Courses\\Algorithms\\Lesson 2\\4.Fibo");
 		tester.runTests();
 	}

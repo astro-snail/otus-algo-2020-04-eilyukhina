@@ -1,9 +1,12 @@
 package tester;
 
 public interface Task {
+	
+	default void setUp(String[] data) {};
+	
+	default void tearDown() {};
 
-	public String[] run(String[] data);
+	String[] run(String[] data);
 	
-	public String getName();
-	
+	String getName();
 }

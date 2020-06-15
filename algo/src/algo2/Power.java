@@ -1,8 +1,5 @@
 package algo2;
 
-import java.math.BigDecimal;
-import java.math.BigInteger;
-
 import tester.Task;
 import tester.Tester;
 

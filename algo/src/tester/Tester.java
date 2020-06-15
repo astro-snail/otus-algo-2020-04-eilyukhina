@@ -34,11 +34,15 @@ public class Tester {
 			String[] in = Files.readAllLines(inFile).toArray(new String[0]);
 			String[] out = Files.readAllLines(outFile).toArray(new String[0]);
 			
+			task.setUp(in);
+			
 			long start = System.currentTimeMillis();
 			
 			String[] result = task.run(in);
 			
 			long end = System.currentTimeMillis();
+			
+			task.tearDown();
 
 			return Arrays.equals(result, out) + ", run time: " + (end - start) + " ms";
 			
