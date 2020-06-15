@@ -8,39 +8,6 @@ public class PriorityQueue<T> {
 	
 	private PriorityNode<Queue<T>> head;
 	
-	public static void main(String[] args) {
-		PriorityQueue<Integer> queue = new PriorityQueue<>();
-		
-		System.out.println(queue);
-		
-		queue.enqueue(3, 9);
-		queue.enqueue(2, 0);
-		queue.enqueue(1, 1);
-		queue.enqueue(1, 2);
-		queue.enqueue(3, 3);
-		queue.enqueue(3, 4);
-		queue.enqueue(2, 5);
-		queue.enqueue(1, 6);
-		queue.enqueue(2, 7);
-		queue.enqueue(1, 8);
-		
-		System.out.println(queue);
-		
-		while (!queue.isEmpty()) {
-			System.out.print(queue.dequeue() + ": ");
-			System.out.println(queue);
-		}	
-		
-		for (int i = 0; i < 100; i++) {
-			queue.enqueue(i % 10, i);
-		}
-		System.out.println(queue);
-		
-		while (!queue.isEmpty()) {
-			System.out.print(queue.dequeue() + ", ");
-		}	
-	}
-	
 	public PriorityQueue() {
 		this.head = null;
 	}
@@ -53,7 +20,7 @@ public class PriorityQueue<T> {
 			node.next = head;
 			head = node;
 		} else {
-			// find the right priority queue
+			// find the right priority
 			PriorityNode<Queue<T>> temp = head;
 			while (temp.next != null && temp.next.priority <= priority) {
 				temp = temp.next;
