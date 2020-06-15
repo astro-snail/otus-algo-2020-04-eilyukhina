@@ -41,12 +41,11 @@ public class Main {
 	}
 
 	public static void main(String[] args) {
-		//testArray(SingleArray.class);
-		//testArray(VectorArray.class);
-		//testArray(FactorArray.class);
-		//testArray(MatrixArray.class);
-		//testArray(SparseArray.class);
-		//testArray(ArrayListWrapper.class);
+		testArray(SingleArray.class);
+		testArray(VectorArray.class);
+		testArray(FactorArray.class);
+		testArray(MatrixArray.class);
+		testArray(ArrayListWrapper.class);
 		testArray(SinglyLinkedList.class);
 		testArray(DoublyLinkedList.class);
 	}
