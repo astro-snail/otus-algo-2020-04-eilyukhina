@@ -53,7 +53,7 @@ public class Main {
 	private static void testArray(Class<? extends IArray> type) {
 		Tester tester;
 		for (Operation operation : Operation.values()) {
-			String path = "src/0.ARRAY/" + operation.ordinal() + "." + operation;
+			String path = "src/algo4/0.ARRAY/" + operation.ordinal() + "." + operation;
 			tester = new Tester(createTask(operation, type), path);
 			tester.runTests();
 		}	
