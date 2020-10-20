@@ -15,6 +15,14 @@ public class SortUtils {
 		arr[j] = temp;
 	}
 
+	public static int[] generateRandomArray(int length, int maxValue) {
+		int[] arr = new int[length];
+		for (int i = 0; i < arr.length; i++) {
+			arr[i] = (int) Math.floor(Math.random() * maxValue);
+		}
+		return arr;
+	}
+
 	// The following methods are required to test the results using test data provided
 
 	public static int[] testInputToIntArray(String[] data) {

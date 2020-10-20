@@ -2,40 +2,41 @@ package algo6;
 
 import java.util.Arrays;
 
-public class RadixSort {
+import algo5.Sort;
+import algo5.SortUtils;
+
+public class RadixSort implements Sort {
 
 	public static void main(String[] args) {
-		RadixSort rs = new RadixSort();
-		rs.generate();
-		System.out.println(Arrays.toString(rs.a));
+		RadixSort rs = new RadixSort(SortUtils.generateRandomArray(100, 1000));
+		System.out.println(Arrays.toString(rs.arr));
 		rs.sort();
-		System.out.println(Arrays.toString(rs.a));
+		System.out.println(Arrays.toString(rs.arr));
 	}
-	
-	private int[] a = new int[20];
-	
-	private void generate() {
-		for (int i = 0; i < a.length; i++) {
-			a[i] = (int) Math.round(Math.random() * 1000);
-		}
+
+	private int[] arr;
+
+	public RadixSort(int[] arr) {
+		this.arr = arr;
 	}
-	
-	private void sort() {
+
+	@Override
+	public void sort() {
 		for (int divisor = 1; divisor <= 100; divisor *= 10) {
-			
+
 			int[] digits = new int[10];
-			int[] sorted = new int[a.length];
-			
-			for (int i = 0; i < a.length; i++) {
-				digits[(a[i] / divisor) % 10]++;
+			int[] sorted = new int[arr.length];
+
+			for (int i = 0; i < arr.length; i++) {
+				digits[(arr[i] / divisor) % 10]++;
 			}
 			for (int j = 1; j < digits.length; j++) {
 				digits[j] += digits[j - 1]; 
 			}
-			for (int i = a.length - 1; i >= 0; i--) {
-				sorted[--digits[(a[i] / divisor) % 10]] = a[i];
+			for (int i = arr.length - 1; i >= 0; i--) {
+				sorted[--digits[(arr[i] / divisor) % 10]] = arr[i];
 			}
-			a = sorted;	
+			arr = sorted;	
 		}
 	}
 }

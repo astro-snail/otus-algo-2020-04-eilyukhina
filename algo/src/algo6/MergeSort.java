@@ -2,55 +2,58 @@ package algo6;
 
 import java.util.Arrays;
 
-public class MergeSort {
+import algo5.Sort;
+import algo5.SortUtils;
+
+public class MergeSort implements Sort {
 
 	public static void main(String[] args) {
-		MergeSort ms = new MergeSort();
-		System.out.println(Arrays.toString(ms.a));
-		ms.sort(0, ms.a.length - 1);
-		System.out.println(Arrays.toString(ms.a));
+		MergeSort ms = new MergeSort(SortUtils.generateRandomArray(100, 1024 * 64));
+		System.out.println(Arrays.toString(ms.arr));
+		ms.sort();
+		System.out.println(Arrays.toString(ms.arr));
 	}
-	
-	private int[] a = {5, 4, 9, 0, 8, 3, 2, 1, 7, 6};
-	
-	public MergeSort() {
-		
-	}
-	
+
+	private int[] arr;
+
 	public MergeSort(int[] a) {
-		this.a = a;
+		this.arr = a;
 	}
-	
-	public void sort(int left, int right) {
+
+	@Override
+	public void sort() {
+		sort(0, arr.length - 1);
+	}
+
+	private void sort(int left, int right) {
 		if (left >= right) return;
 		int centre = (left + right) / 2;
 		sort(left, centre);
 		sort(centre + 1, right);
 		merge(left, centre, right);
 	}
-	
+
 	private void merge(int left, int centre, int right) {
 		int i = left;
 		int j = centre + 1;
 		int k = 0;
 		int[] s = new int[right - left + 1];
-		
+
 		while (i <= centre && j <= right) {
-			if (a[i] < a[j]) {
-				s[k++] = a[i++];
+			if (arr[i] < arr[j]) {
+				s[k++] = arr[i++];
 			} else {
-				s[k++] = a[j++];
+				s[k++] = arr[j++];
 			}
 		}
 		while (i <= centre) {
-			s[k++] = a[i++];
+			s[k++] = arr[i++];
 		}
 		while (j <= right) {
-			s[k++] = a[j++];
+			s[k++] = arr[j++];
 		}
-		
 		for (int l = left; l <= right; l++) {
-			a[l] = s[l - left];
+			arr[l] = s[l - left];
 		}	
 	}
 }

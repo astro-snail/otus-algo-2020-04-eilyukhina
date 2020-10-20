@@ -1,4 +1,4 @@
-package algo6;
+package algo6.externalsort;
 
 import java.io.BufferedOutputStream;
 import java.io.FileOutputStream;
@@ -9,16 +9,16 @@ public class FileGenerator {
 
 	private String filename;
 	private int size;
-	
+
 	public FileGenerator(String filename, int size) {
 		this.filename = filename;
 		this.size = size;
 	}
-	
+
 	public void generateFile() throws IOException {
 		writeToFile();
 	}
-	
+
 	private void writeToFile() throws IOException {
 		try (OutputStream os = new BufferedOutputStream(new FileOutputStream(filename))) {
 			for (int i = 0; i < size; i++) {
@@ -26,9 +26,9 @@ public class FileGenerator {
 			}
 		}
 	}
-	
+
 	// Returns random integer 2-byte number 
 	private int getRandomInt() {
-		return (int) Math.round(Math.random() * 1024 * 64);
+		return (int) Math.floor(Math.random() * 1024 * 64);
 	}
 }

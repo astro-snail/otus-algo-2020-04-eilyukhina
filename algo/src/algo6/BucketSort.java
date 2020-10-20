@@ -4,52 +4,45 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class BucketSort {
+import algo5.Sort;
+import algo5.SortUtils;
+
+public class BucketSort implements Sort {
 
 	public static void main(String[] args) {
-		BucketSort bs = new BucketSort();
-		bs.generate();
-		System.out.println(Arrays.toString(bs.a));
+		BucketSort bs = new BucketSort(SortUtils.generateRandomArray(100, 1024 * 64), 20);
+		System.out.println(Arrays.toString(bs.arr));
 		bs.sort();
-		System.out.println(Arrays.toString(bs.a));
+		System.out.println(Arrays.toString(bs.arr));
 	}
-	
-	private int[] a = new int[100];
-	private int k = 20;
-	
-	public BucketSort() {
-		
-	}
-	
+
+	private int[] arr;
+	private int k; // number of buckets
+
 	public BucketSort(int[] a, int k) {
-		this.a = a;
+		this.arr = a;
 		this.k = k;
 	}
-	
-	private void generate() {
-		for (int i = 0; i < a.length; i++) {
-			a[i] = (int) Math.round(Math.random() * 1024 * 64);
+
+	@Override
+	public void sort() {
+		List[] buckets = new ArrayList[k];
+		for (int i = 0; i < k; i++) {
+			buckets[i] = new ArrayList();
+		}
+		int max = 65535;
+		for (int i = 0; i < arr.length; i++) {
+			int index = Math.floorDiv(k * arr[i], max);
+			addToBucket(buckets[index], arr[i]);
+		}
+		int start = 0;
+		for (int i = 0; i < k; i++) {
+			for (int j = 0; j < buckets[i].size(); j++) {
+				arr[start++] = (int) buckets[i].get(j);
+			}
 		}
 	}
-	
-	private void sort() {
-	    List[] buckets = new ArrayList[k];
-	    for (int i = 0; i < k; i++) {
-	    	buckets[i] = new ArrayList();
-	    }
-	    int max = 65535;
-	    for (int i = 0; i < a.length; i++) {
-	    	int index = Math.floorDiv(k * a[i], max);
-	    	addToBucket(buckets[index], a[i]);
-	    }
-	    int start = 0;
-	    for (int i = 0; i < k; i++) {
-	    	for (int j = 0; j < buckets[i].size(); j++) {
-	    		a[start++] = (int) buckets[i].get(j);
-	    	}
-	    }
-	}
-	
+
 	private void addToBucket(List bucket, int element) {
 		int i = 0;
 		while (i < bucket.size() && element > (int) bucket.get(i)) {
