@@ -3,30 +3,30 @@ package algo5;
 import tester.Task;
 import tester.Tester;
 
-public class BubbleSort extends CommonSort {
+public class BubbleSort extends SortTask {
 
 	public static void main(String[] args) {
 		Task task = new BubbleSort();
-		//Tester tester = new Tester(task, "src/algo5/sorting-tests/0.random");
-		//Tester tester = new Tester(task, "src/algo5/sorting-tests/1.digits");
-		Tester tester = new Tester(task, "src/algo5/sorting-tests/2.sorted");
-		//Tester tester = new Tester(task, "src/algo5/sorting-tests/3.revers");
+		//Tester tester = new Tester(task, "sorting-tests/0.random");
+		//Tester tester = new Tester(task, "sorting-tests/1.digits");
+		Tester tester = new Tester(task, "sorting-tests/2.sorted");
+		//Tester tester = new Tester(task, "sorting-tests/3.revers");
 		tester.runTests();
 	}
-	
+
 	@Override
-	protected void sort() {
+	public void sort() {
 		boolean swapped = false;
-		int n = a.length;
+		int length = arr.length;
 		do {
 			swapped = false;
-			for (int j = 0; j < n - 1; j++) {
-				if (a[j] > a[j + 1]) {
-					swap(j, j + 1);
+			for (int i = 0; i < length - 1; i++) {
+				if (arr[i] > arr[i + 1]) {
+					SortUtils.swap(arr, i, i + 1);
 					swapped = true;
 				}
 			}
-			n--;
+			length--;
 		} while (swapped);
 	}
 
